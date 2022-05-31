@@ -43,20 +43,20 @@ const Navbar: React.FC = () => {
           <Nav>
             <List>
               <Item>
-                <Link href="#">Premium</Link>
+                <Link href="/">Premium</Link>
               </Item>
               <Item>
-                <Link href="#">Suport</Link>
+                <Link href="/">Suport</Link>
               </Item>
               <Item>
-                <Link href="#">Baixar</Link>
+                <Link href="/">Baixar</Link>
               </Item>
               <Separator />
               <Item>
-                <Link href="#">Inscreva-se</Link>
+                <Link href="/">Inscreva-se</Link>
               </Item>
               <Item>
-                <Link href="#">Entrar</Link>
+                <Link href="/">Entrar</Link>
               </Item>
             </List>
             <Logo />
