@@ -9,6 +9,11 @@ export const Container = styled.header`
 
   padding: 0 17px;
 
+  > div > a > svg {
+    position: relative;
+    z-index: 2;
+  }
+
   @media (min-width: 1000px) {
     height: 80px;
 
@@ -25,6 +30,7 @@ export const Wrapper = styled.div`
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
+  position: relative;
 
   @media (min-width: 1000px) {
     width: min(100%, 966px);
@@ -32,6 +38,25 @@ export const Wrapper = styled.div`
 
   @media (min-width: 1200px) {
     width: min(100%, 1166px);
+  }
+`;
+
+export const MenuIconWrapper = styled.div`
+  position: absolute;
+  width: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: flex-end;
+
+  &.active {
+    z-index: 4;
+    position: fixed;
+    width: calc(100% - 34px);
+
+    @media (min-width: 716px) {
+      width: 716px;
+    }
   }
 `;
 
@@ -44,10 +69,9 @@ export const MenuIcon = styled.button`
   outline: none;
 
   position: relative;
-  z-index: 4;
 
   > div {
-    width: 100%;
+    width: 23px;
     height: 2.5px;
     background-color: var(--white);
     position: absolute;
@@ -91,7 +115,7 @@ export const MenuIcon = styled.button`
 
 export const Overlay = styled.div`
   position: fixed;
-  z-index: 2;
+  z-index: -1;
   top: 0;
   left: 0;
   width: 100%;
@@ -99,6 +123,7 @@ export const Overlay = styled.div`
   transition: all ease-in-out 180ms;
 
   &.active {
+    z-index: 2;
     background-color: rgba(0, 0, 0, 0.6);
   }
 
@@ -112,7 +137,7 @@ export const MenuBar = styled.div`
   z-index: 3;
   top: 0;
   right: 0;
-  width: 100%;
+  width: min(100%, 447px);
   height: 100%;
 
   transition: transform ease-in 180ms, opacity ease-in-out 180ms;
@@ -141,6 +166,7 @@ export const MenuBar = styled.div`
   @media (min-width: 1000px) {
     position: static;
     display: flex;
+    width: auto;
     justify-content: flex-end;
 
     transform: translateX(0%);
@@ -150,7 +176,7 @@ export const MenuBar = styled.div`
 
 export const Nav = styled.nav`
   height: max(500px, 100vh);
-  width: min(100%, 447px);
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;

@@ -5,6 +5,7 @@ import Logo from '../../Logo';
 import {
   Container,
   Wrapper,
+  MenuIconWrapper,
   MenuBar,
   MenuIcon,
   Nav,
@@ -22,16 +23,21 @@ const Navbar: React.FC = () => {
       <Wrapper>
         <Logo />
 
-        <MenuIcon
-          className={`${isActive && 'active'}`}
-          onClick={() => setActive((a) => !a)}
-        >
-          <div></div>
-          <div></div>
-          <div></div>
-        </MenuIcon>
+        <MenuIconWrapper className={`${isActive && 'active'}`}>
+          <MenuIcon
+            className={`${isActive && 'active'}`}
+            onClick={() => setActive((a) => !a)}
+          >
+            <div></div>
+            <div></div>
+            <div></div>
+          </MenuIcon>
+        </MenuIconWrapper>
 
-        <Overlay className={`${isActive && 'active'}`} />
+        <Overlay
+          className={`${isActive && 'active'}`}
+          onClick={() => setActive(false)}
+        />
 
         <MenuBar className={`${isActive && 'active'}`}>
           <Nav>
