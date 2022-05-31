@@ -1,9 +1,29 @@
+@import url('./fonts.css');
+
+:root {
+  --font-light: PlusJakartaSansLight, sans-serif;
+  --font-regular: PlusJakartaSansRegular, sans-serif;
+  --font-medium: PlusJakartaSansMedium, sans-serif;
+  --font-semiBold: PlusJakartaSansSemiBold, sans-serif;
+  --font-bold: PlusJakartaSansBold, sans-serif;
+  --font-extraBold: PlusJakartaSansExtraBold, sans-serif;
+
+  --black: #000000;
+  --white: #ffffff;
+  --green: #1ed760;
+  --purple: #2941ab;
+  --gray: #919496;
+  --dark-gray: #222326;
+}
+
 html,
-body {
+body,
+#root {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: var(--font-medium);
+  box-sizing: border-box;
+  max-width: 100vw;
 }
 
 a {
@@ -11,6 +31,13 @@ a {
   text-decoration: none;
 }
 
-* {
+*,
+input,
+button {
   box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  outline: none;
+  background-color: transparent;
+  border: none;
 }
