@@ -19,7 +19,6 @@ Spotify clone is a copy of Spotify homepage
 <a href="https://github.com/PabloFerrari013/spotifyClone/blob/main/spotify/public/desktop.gif">Desktop view</a>
 </br>
 <a href="https://github.com/PabloFerrari013/spotifyClone/blob/main/spotify/public/mobile.gif">Mobile view</a>
-
 ---
 
 ## 🔗 Domain
