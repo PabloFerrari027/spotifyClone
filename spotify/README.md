@@ -1,7 +1,7 @@
 # Spotify Clone 
 
 ## 🤔 About the project
-Spotify clone is a copy of Spotify homepage
+Spotify Clone is a web project I built using React Js, Styled Components, Typescript and Next js. It consists of a clone Spotify homepage. The project is fully responsive, that is, it adjusts to all screens.
 
 ---
 
